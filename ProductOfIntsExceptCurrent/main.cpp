@@ -2,7 +2,12 @@
 #include <vector>
 #include <iterator>
 
-
+std::ostream &operator<<(std::ostream &os, const std::vector<int> &vec) {
+	for(size_t i {0}; i < vec.size(); i++) {
+		os << "[" << vec.at(i) << " ";
+	}
+	return os;
+}
 
 int main() {
 	std::vector<int> int_vec {1, 2, 3, 4, 5};	
