@@ -6,6 +6,7 @@ std::ostream &operator<<(std::ostream &os, const std::vector<int> &vec) {
 	for(size_t i {0}; i < vec.size(); i++) {
 		os << "[" << vec.at(i) << " ";
 	}
+	os << "]";
 	return os;
 }
 
@@ -21,10 +22,12 @@ int main() {
 		}	
 		product_vec.push_back(product);
 	}
+
+	std::cout << product_vec << std::endl;
 	
-	for(size_t i {0}; i < product_vec.size(); i++) {
+	/*for(size_t i {0}; i < product_vec.size(); i++) {
 		std::cout << product_vec.at(i) << " ";
-	}	
+	}*/	
 	std::cout << std::endl;
 	return 0;
 }
