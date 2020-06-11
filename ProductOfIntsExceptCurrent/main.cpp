@@ -4,16 +4,15 @@
 
 int main() {
 	std::vector<int> int_vec {1, 2, 3, 4, 5};	
-	auto vec_it = int_vec.begin();
-	auto multiply = [](){};
 	std::vector<int> product_vec; 	
 	for(size_t i {0}; i < int_vec.size(); i++) {
-		for(size_t j {0}; j < int_vec; j++) {
-			int product;
+		int product {1};
+		for(size_t j {0}; j < int_vec.size(); j++) {
 			if(i != j) {
-				
+				product *= int_vec.at(j);			
 			}			
 		}	
+
 	}
 	return 0;
 }
