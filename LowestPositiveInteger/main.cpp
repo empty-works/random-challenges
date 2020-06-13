@@ -27,6 +27,7 @@ std::ostream &operator<<(std::ostream &os, const std::vector<int> &int_vec) {
 int main() {
 	std::vector<int> int_vec {3, 4, -1, 1};		
 	std::sort(int_vec.begin(), int_vec.end());		
+	int lastElement = int_vec.at(int_vec.size() - 1);
 	return 0;
 }
 
