@@ -15,9 +15,18 @@
 #include <iterator>
 #include <vector>
 
+std::ostream &operator<<(std::ostream &os, const std::vector<int> &int_vec) {
+	os << "[ ";
+	for(auto num : int_vec) {
+		os << num << " ";
+	}	
+	os << "]";
+	return os;
+}
+
 int main() {
 	std::vector<int> int_vec {3, 4, -1, 1};		
-	
+		
 	return 0;
 }
 
