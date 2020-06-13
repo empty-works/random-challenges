@@ -24,10 +24,35 @@ std::ostream &operator<<(std::ostream &os, const std::vector<int> &int_vec) {
 	return os;
 }
 
+void findLowestInt(std::vector<int>::iterator &, std::vector<int> &);
+
 int main() {
-	std::vector<int> int_vec {3, 4, -1, 1};		
+	std::vector<int> int_vec {1, 2, 0};		
+	std::cout << "Input vector: " << int_vec << std::endl;	
 	std::sort(int_vec.begin(), int_vec.end());		
-	int lastElement = int_vec.at(int_vec.size() - 1);
+	auto it = std::find_if(int_vec.begin(), int_vec.end(), [](int x){return x > 0;});
+	findLowestInt(it, int_vec);
 	return 0;
 }
 
+void findLowestInt(std::vector<int>::iterator &it, std::vector<int> &int_vec) {
+	if(*it > 1) {
+		std::cout << --*it << std::endl;
+	}
+	else {
+		int lastInt {*it};
+		bool numFound = false;
+		while(it != int_vec.end()) {
+			++it;
+			if(lastInt != *it && ++lastInt != *it) { // Screen out repeated numbers.
+				std::cout << lastInt << std::endl;
+				numFound = true;
+				break;
+			}
+		}
+		if(!numFound) {
+			std::cout << int_vec << std::endl;
+			std::cout << int_vec.size() << std::endl;
+		}	
+	}
+}
