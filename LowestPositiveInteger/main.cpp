@@ -11,5 +11,6 @@ int main() {
 }
 
 bool containsOne(const std::vector<int> int_vec) {
-
+	auto it = int_vec.begin();
+	it = std::find(int_vec.begin(), int_vec.end(), 1);
 }
