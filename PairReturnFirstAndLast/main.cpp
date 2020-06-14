@@ -16,14 +16,14 @@
 #include <iostream>
 #include <functional>
 
-std::pair<int, int> cons(int a, int b) {
-	std::pair<int, int> the_pair {a, b};	
+template<typename T, typename W>
+std::pair<T, W> cons(T a, W b) {
+	std::pair<T, W> the_pair {a, b};	
 	return the_pair;
 }
 
-
-int car(std::function<std::pair<int, int>(int, int)> func) {
-	return obj.first;
+int car(std::pair<int, int> the_pair) {
+	return the_pair.first;
 }
 
 int cdr(std::pair<int, int> the_pair) {
