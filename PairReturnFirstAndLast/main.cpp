@@ -25,8 +25,10 @@ std::pair<T, W> cons(T a, W b) {
 
 int main() {
 
-	
+		
 	return 0;
 }
 
-
+int car(std::pair<int, int> the_pair) {
+	return the_pair.first;
+}
