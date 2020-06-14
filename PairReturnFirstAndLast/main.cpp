@@ -13,8 +13,6 @@
  * Implement car and cdr.
  * */
 
-
-
 #include <iostream>
 
 template<typename T, typename W>
@@ -23,12 +21,17 @@ std::pair<T, W> cons(T a, W b) {
 	return the_pair;
 }
 
+int car(std::pair<int, int> the_pair) {
+	return the_pair.first;
+}
+
+int cdr(std::pair<int, int> the_pair) {
+	return the_pair.second;
+}
+
 int main() {
 
 		
 	return 0;
 }
 
-int car(std::pair<int, int> the_pair) {
-	return the_pair.first;
-}
