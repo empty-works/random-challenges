@@ -32,7 +32,9 @@ int cdr(std::pair<int, int> the_pair) {
 
 int main() {
 
-		
+	std::cout << "First element: " << car(cons(3, 4)) <<  std::endl;
+	std::cout << "Second element: " << cdr(cons(3, 4)) <<  std::endl;
+
 	return 0;
 }
 
