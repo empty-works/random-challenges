@@ -5,7 +5,7 @@
  *
  * Given this implementation of cons:
  *
- * def const(a, b):
+ * def cons(a, b):
  * 	def pair(f):
  * 		return f(a, b)
  * 	return pair
@@ -13,9 +13,20 @@
  * Implement car and cdr.
  * */
 
+
+
 #include <iostream>
+
+template<typename T, typename W>
+std::pair<T, W> cons(T a, W b) {
+	std::pair<T, W> the_pair {a, b};	
+	return the_pair;
+}
 
 int main() {
 
+	
 	return 0;
 }
+
+
