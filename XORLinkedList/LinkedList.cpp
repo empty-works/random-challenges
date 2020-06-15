@@ -1,11 +1,11 @@
 #include "LinkedList.h"
 
-LinkedList::add(int data) {
+void LinkedList::add(int data) {
 	if(head == null) {
 		Node newNode {data};
 	}		
 }
 
-LinkedList::Node get(int index) {
+Node LinkedList::get(int index) {
 
 }
