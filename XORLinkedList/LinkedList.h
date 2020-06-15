@@ -6,11 +6,12 @@ class LinkedList {
 		class Node {
 			int data;	
 			public:
-				Node both;
-				Node(int data): data{data};	
+				Node *both;
+				Node(int data): data(data) {}	
 		};
+		Node head;
 	public:		
-		void add(Node node);
+		void add(int data);
 		Node get(int index);
 };
 
