@@ -10,6 +10,8 @@ class LinkedList {
 				Node(int data): data{data};	
 		};
 	public:		
+		void add(Node node);
+		Node get(int index);
 };
 
 #endif
