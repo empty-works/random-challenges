@@ -6,7 +6,7 @@
 
 class LinkedList {
 	private:
-		Node head;
+		Node *head {NULL};
 	public:		
 		void add(int data);
 		Node get(int index);
