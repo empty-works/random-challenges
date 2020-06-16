@@ -13,6 +13,7 @@
 
 #include <iostream>
 #include <map>
+#include <string>
 
 int main() {
 	std::map<char, int> encoded;
@@ -42,6 +43,11 @@ int main() {
 	encoded['x'] = 24;
 	encoded['y'] = 25;
 	encoded['z'] = 26;
+
+	std::cout << "Enter a coded message: ";
+	std::string msg {};
+	std::cin >> msg;
+	
 
 	return 0;
 }
