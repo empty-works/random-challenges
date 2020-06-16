@@ -14,6 +14,7 @@
 #include <iostream>
 #include <map>
 #include <string>
+#include <vector>
 
 int main() {
 	std::map<char, char> encoded;
@@ -48,7 +49,10 @@ int main() {
 	std::string msg {};
 	std::cin >> msg;
 	
-		
+	std::vector<char> chr_vec {};	
+	for(auto chr : msg) {
+				
+	}	
 
 	return 0;
 }
