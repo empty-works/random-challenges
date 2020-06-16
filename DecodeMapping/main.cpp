@@ -16,7 +16,7 @@
 #include <string>
 
 int main() {
-	std::map<char, int> encoded;
+	std::map<int, char> encoded;
 	encoded['a'] = 1;
 	encoded['b'] = 2;
 	encoded['c'] = 3;
@@ -48,6 +48,7 @@ int main() {
 	std::string msg {};
 	std::cin >> msg;
 	
+		
 
 	return 0;
 }
