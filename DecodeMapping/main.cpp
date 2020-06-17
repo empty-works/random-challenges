@@ -16,6 +16,10 @@
 #include <string>
 #include <vector>
 
+int getCount(char *seq, int n) {
+
+}
+
 int main() {
 	std::map<int, char> encoded;
 	encoded[1] = 'a';
