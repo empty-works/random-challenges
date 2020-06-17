@@ -14,6 +14,7 @@
 #include <iostream>
 #include <map>
 #include <string>
+#include <cstring>
 #include <vector>
 
 int getCount(char *seq, int n) {
@@ -66,6 +67,7 @@ int main() {
 	encoded[25] = 'y';
 	encoded[26] = 'z';
 
+	/*
 	std::cout << "Enter a coded message: ";
 	std::string msg {};
 	std::cin >> msg;
@@ -74,7 +76,11 @@ int main() {
 	std::cout << "Message entered: " << msg << std::endl;
 	for(auto chr : msg) {
 				
-	}	
-
+	}
+*/
+	char seq[] = "111";	
+	std::cout << "Digit sequence: " << seq << std::endl;
+	int seq_len = std::strlen(seq);
+	std::cout << "Number of combos: " << getCount(seq, seq_len) << std::endl;	
 	return 0;
 }
