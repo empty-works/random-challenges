@@ -17,6 +17,14 @@
 #include <vector>
 
 int getCount(char *seq, int n) {
+	if(n == 0 || n == 1) {
+		return 1;
+	}
+	// Clear leading zeroes.
+	if(seq[0] == '0') {
+		return 0;
+	}
+
 
 }
 
