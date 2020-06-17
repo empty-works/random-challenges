@@ -17,6 +17,7 @@
 #include <vector>
 
 int getCount(char *seq, int n) {
+	int count {0};
 	if(n == 0 || n == 1) {
 		return 1;
 	}
@@ -25,7 +26,11 @@ int getCount(char *seq, int n) {
 		return 0;
 	}
 
-
+	// Is the last digit greater than zero? Keep going until n is 1 or 0.
+	if(seq[n - 1] > 0) {
+		count = getCount(seq, n - 1); 	
+	}	
+	return count;
 }
 
 int main() {
