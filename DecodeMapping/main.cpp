@@ -30,6 +30,10 @@ int getCount(char *seq, int n) {
 	if(seq[n - 1] > 0) {
 		count = getCount(seq, n - 1); 	
 	}	
+	// Now count double digits under 27.
+	if((seq[n - 2] == '1' || seq[n - 2] == '2') && seq[n - 1] < '7') {
+		count += getCount(seq, n - 2);
+	}	
 	return count;
 }
 
