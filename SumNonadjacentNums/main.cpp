@@ -18,5 +18,11 @@ int main() {
 	int n {0};
 	std::cout << "Enter number of digits: ";
 	std::cin >> n;	
+	int *int_arr = new int[n];
+	for(size_t i {0}; i < int_arr.length; i++) {
+		std::cout << "Enter digit [" << i + 1 << "]: ";
+		std::cin >> int_arr[i];
+	}
+	delete [] int_arr;
 	return 0;
 }
