@@ -15,11 +15,11 @@
 #include <iostream>
 
 int main() {
-	int n {0};
+	size_t n {0};
 	std::cout << "Enter number of digits: ";
 	std::cin >> n;	
 	int *int_arr = new int[n];
-	for(size_t i {0}; i < int_arr.length; i++) {
+	for(size_t i {0}; i < n; i++) {
 		std::cout << "Enter digit [" << i + 1 << "]: ";
 		std::cin >> int_arr[i];
 	}
