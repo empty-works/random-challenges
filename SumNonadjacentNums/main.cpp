@@ -13,15 +13,7 @@
  * */
 
 #include <iostream>
-
-std::ostream &operator<<(std::ostream &os, int *int_arr) {
-	std::cout << "[ ";
-	for(auto num : int_arr) {
-		os << num << " "; 
-	}
-	std::cout << "]";
-	return os;
-}
+#include <vector>
 
 
 
@@ -29,12 +21,14 @@ int main() {
 	size_t n {0};
 	std::cout << "Enter number of digits: ";
 	std::cin >> n;	
-	int *int_arr = new int[n];
+	std::vector<int> int_vec {};
 	for(size_t i {0}; i < n; i++) {
 		std::cout << "Enter digit [" << i + 1 << "]: ";
-		std::cin >> int_arr[i];
+		int new_num {0};
+		std::cin >> new_num;
+	       	int_vec.push_back(new_num);	
 	}
-	std::cout << "Input array: " << *int_arr << std::endl;
+	std::cout << "Input array: " << int_vec << std::endl;
 	delete [] int_arr;
 	return 0;
 }
