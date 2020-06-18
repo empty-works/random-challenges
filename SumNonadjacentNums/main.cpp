@@ -14,6 +14,17 @@
 
 #include <iostream>
 
+std::ostream &operator<<(std::ostream &os, int *int_arr) {
+	std::cout << "[ ";
+	for(auto num : int_arr) {
+		os << num << " "; 
+	}
+	std::cout << "]";
+	return os;
+}
+
+
+
 int main() {
 	size_t n {0};
 	std::cout << "Enter number of digits: ";
@@ -23,6 +34,7 @@ int main() {
 		std::cout << "Enter digit [" << i + 1 << "]: ";
 		std::cin >> int_arr[i];
 	}
+	std::cout << "Input array: " << *int_arr << std::endl;
 	delete [] int_arr;
 	return 0;
 }
