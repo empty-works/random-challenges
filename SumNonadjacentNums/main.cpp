@@ -15,7 +15,8 @@
 #include <iostream>
 
 int main() {
-
-		
+	int n {0};
+	std::cout << "Enter number of digits: ";
+	std::cin >> n;	
 	return 0;
 }
