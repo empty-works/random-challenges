@@ -15,7 +15,14 @@
 #include <iostream>
 #include <vector>
 
-
+std::ostream &operator<<(std::ostream &os, const std::vector<int> int_vec) {
+	os << "[ ";
+	for(int num : int_vec) {
+		os << num << " ";
+	}
+	os << "]";
+	return os;
+}
 
 int main() {
 	size_t n {0};
@@ -29,6 +36,5 @@ int main() {
 	       	int_vec.push_back(new_num);	
 	}
 	std::cout << "Input array: " << int_vec << std::endl;
-	delete [] int_arr;
 	return 0;
 }
