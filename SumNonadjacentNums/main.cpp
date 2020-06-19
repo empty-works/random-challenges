@@ -27,10 +27,13 @@ std::ostream &operator<<(std::ostream &os, const std::vector<int> int_vec) {
 int getMax(std::vector<int> int_vec) {
 	int incl = int_vec.at(0);	
 	int excl = 0;
+	int excl_new = 0;
 
 	for(size_t i {1}; i < int_vec.size(); i++) {
+		excl_new = (incl > excl) ? incl : excl;
+				
 		incl = excl + int_vec.at(i);	
-		excl = incl > excl ? incl : excl;
+		excl = excl_new;
 	}
 	return ((incl > excl) ? incl : excl);
 }
