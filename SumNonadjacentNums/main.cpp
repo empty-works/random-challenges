@@ -46,6 +46,7 @@ int main() {
 		std::cin >> new_num;
 	       	int_vec.push_back(new_num);	
 	}
-	std::cout << "Input array: " << int_vec << std::endl;
+
+	std::cout << "Largest sum: " << getMax(int_vec) << std::endl;
 	return 0;
 }
