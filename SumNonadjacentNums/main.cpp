@@ -24,6 +24,10 @@ std::ostream &operator<<(std::ostream &os, const std::vector<int> int_vec) {
 	return os;
 }
 
+int getMax(std::vector<int> int_vec, int n) {
+	
+}
+
 int main() {
 	size_t n {0};
 	std::cout << "Enter number of digits: ";
