@@ -32,6 +32,7 @@ int getMax(std::vector<int> int_vec) {
 		incl = excl + int_vec.at(i);	
 		excl = incl > excl ? incl : excl;
 	}
+	return ((incl > excl) ? incl : excl);
 }
 
 int main() {
