@@ -5,6 +5,10 @@
 
 #include <iostream>
 
+void foo() {
+	std::cout << "foo activated" << std::endl;
+}
+
 
 
 int main() {
