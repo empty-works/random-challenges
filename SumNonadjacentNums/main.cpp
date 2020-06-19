@@ -24,8 +24,14 @@ std::ostream &operator<<(std::ostream &os, const std::vector<int> int_vec) {
 	return os;
 }
 
-int getMax(std::vector<int> int_vec, int n) {
-	
+int getMax(std::vector<int> int_vec) {
+	int incl = int_vec.at(0);	
+	int excl = 0;
+
+	for(size_t i {1}; i < int_vec.size(); i++) {
+		incl = excl + int_vec.at(i);	
+		excl = incl > excl ? incl : excl;
+	}
 }
 
 int main() {
