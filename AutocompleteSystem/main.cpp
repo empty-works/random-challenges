@@ -19,7 +19,7 @@
 
 std::vector<std::string> getResults(std::string search_str, std::vector<std::string> ref_vec) {
 	std::vector<std::string> result_vec {};
-	std::copy_if(ref_vec.begin(), ref_vec.end(), result_vec.begin(), [](){});	
+	std::copy_if(ref_vec.begin(), ref_vec.end(), result_vec.begin(), [ref_vec](std::string word){});	
 	return result_vec;
 }
 
