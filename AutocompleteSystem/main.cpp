@@ -13,8 +13,14 @@
  * */
 
 #include <iostream>
+#include <vector>
+#include <string>
+
+std::vector<string> getResults(std::string search_str) {
+
+}
 
 int main() {
-
+	
 	return 0;
 }
