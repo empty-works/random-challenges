@@ -15,9 +15,12 @@
 #include <iostream>
 #include <vector>
 #include <string>
+#include <algorithm>
 
-std::vector<string> getResults(std::string search_str) {
-
+std::vector<std::string> getResults(std::string search_str, std::vector<std::string> ref_vec) {
+	std::vector<std::string> result_vec {};
+	std::copy_if(ref_vec.begin(), ref_vec.end(), result_vec.begin(), [](){});	
+	return result_vec;
 }
 
 int main() {
