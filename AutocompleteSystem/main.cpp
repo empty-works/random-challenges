@@ -17,6 +17,16 @@
 #include <string>
 #include <algorithm>
 
+bool isMatch(std::string search_str, std::string ref_word) {
+	bool isMatch{true};
+	for(size_t i {0}; i < word.length(); i++) {
+		if(search_str[i] != ref_word[i]) {
+			isMatch = false;	
+		}
+	}
+	return isMatch;
+}
+
 std::vector<std::string> getResults(std::string search_str, std::vector<std::string> ref_vec) {
 	std::vector<std::string> result_vec {};
 	std::copy_if(ref_vec.begin(), ref_vec.end(), result_vec.begin(), [ref_vec](std::string word){});	
