@@ -22,7 +22,10 @@ std::vector<std::string> getResult(std::string str, std::vector<std::string> ref
 	for(size_t i {0}; i < ref_vec.size(); i++) {
 		bool isMatch{true};
 		for(size_t j {0}; j < str.length(); j++) {
-				
+			if(str[j] != ref_vec.at(i)[j]) {
+				isMatch = false;
+				break;
+			}	
 		}	
 		if(isMatch) {
 		}
