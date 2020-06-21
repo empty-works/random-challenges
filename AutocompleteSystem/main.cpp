@@ -18,7 +18,15 @@
 #include <algorithm>
 
 std::vector<std::string> getResult(std::string str, std::vector<std::string> ref_vec) {
-
+	std::vector<std::string> new_vec {};
+	for(size_t i {0}; i < ref_vec.size(); i++) {
+		bool isMatch{true};
+		for(size_t j {0}; j < str.length(); j++) {
+				
+		}	
+		if(isMatch) {
+		}
+	}
 }
 
 int main() {
