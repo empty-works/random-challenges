@@ -28,6 +28,7 @@ std::vector<std::string> getResult(std::string str, std::vector<std::string> ref
 			}	
 		}	
 		if(isMatch) {
+			new_vec.push_back(ref_vec.at(i));
 		}
 	}
 }
