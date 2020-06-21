@@ -28,12 +28,15 @@ std::vector<std::string> getResult(std::string str, std::vector<std::string> ref
 			}	
 		}	
 		if(isMatch) {
+			std::cout << ref_vec.at(i) << std::endl;
 			new_vec.push_back(ref_vec.at(i));
 		}
 	}
+	return new_vec;
 }
 
 int main() {
-	
+	std::vector<std::string> ref_vec{"dog", "deer", "deal"};	
+	getResult("de", ref_vec); 
 	return 0;
 }
