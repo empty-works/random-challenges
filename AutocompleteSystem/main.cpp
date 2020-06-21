@@ -17,7 +17,9 @@
 #include <string>
 #include <algorithm>
 
+std::vector<std::string> getResult(std::string str, std::vector<std::string> ref_vec) {
 
+}
 
 int main() {
 	
