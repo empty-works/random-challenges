@@ -17,6 +17,15 @@
 #include <string>
 #include <algorithm>
 
+std::ostream &operator<<(std::ostream &os, std::vector<std::string> new_vec) {
+	os << "[ ";
+	for(std::string word : new_vec) {
+		os << word << " ";
+	}
+	os << "]";
+	return os;
+}
+
 std::vector<std::string> getResult(std::string str, std::vector<std::string> ref_vec) {
 	std::vector<std::string> new_vec {};
 	for(size_t i {0}; i < ref_vec.size(); i++) {
