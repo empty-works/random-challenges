@@ -15,15 +15,26 @@
 
 #include <iostream>
 #include <string>
+#include <fstream>
 
 class OrderLogger {
+	std::string filename;
+
 	public:
 	OrderLogger();
+	OrderLogger(std::string filename): filename(filename) {};
 	void record(const std::string order_id);
 	std::string get_last(int i);	
 };
 
 int main() {
+
+	
 	
 	return 0;
 }
+
+void OrderLogger::record(const std::string order_id) {
+		
+}
+
