@@ -36,12 +36,13 @@ int main() {
 }
 
 bool OrderLogger::record(const std::string order_id) {
-	std::ofstream file(filename, std::ios::out);	
+	std::ofstream file;
+	file.open(filename, std::ios::out);
 	if(!file) {
 		std::cout << "Error loading file." << std::endl;
 		return false;	
 	}
-	file << order_id << "\n";	
+	file << order_id << std::endl;	
 	file.close();
 	std::cout << "ID logged!" << std::endl;
 	return true;
