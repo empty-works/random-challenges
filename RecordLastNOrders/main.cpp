@@ -23,7 +23,7 @@ class OrderLogger {
 	public:
 	OrderLogger();
 	OrderLogger(std::string filename): filename(filename) {};
-	void record(const std::string order_id);
+	bool record(const std::string order_id);
 	std::string get_last(int i);	
 };
 
@@ -34,7 +34,14 @@ int main() {
 	return 0;
 }
 
-void OrderLogger::record(const std::string order_id) {
-		
+bool OrderLogger::record(const std::string order_id) {
+	std::ofstream file(filename, std::ios::out);	
+	file.open();
+	if(!file) {
+		std::cout << "Error loading file." << std::endl;
+		return false;	
+	}
+	
+	file.close();
 }
 
