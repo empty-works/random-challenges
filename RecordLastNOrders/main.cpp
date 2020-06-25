@@ -30,8 +30,8 @@ class OrderLogger {
 
 int main() {
 
-	
-	
+	OrderLogger orderLog("test.txt");	
+	orderLog.record("AQ132FHG");	
 	return 0;
 }
 
@@ -43,6 +43,7 @@ bool OrderLogger::record(const std::string order_id) {
 	}
 	file << order_id << "\n";	
 	file.close();
+	std::cout << "ID logged!" << std::endl;
 	return true;
 }
 
@@ -58,5 +59,6 @@ std::string OrderLogger::get_last(int num) {
 		getline(file, line);	
 	}	
 	file.close();
+	std::cout << "Order retrieved!" << std::endl;
 	return line;
 }
