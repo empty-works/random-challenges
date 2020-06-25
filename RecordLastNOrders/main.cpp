@@ -16,6 +16,7 @@
 #include <iostream>
 #include <string>
 #include <fstream>
+#include <vector>
 
 class OrderLogger {
 	std::string filename;
@@ -24,7 +25,7 @@ class OrderLogger {
 	OrderLogger();
 	OrderLogger(std::string filename): filename(filename) {};
 	bool record(const std::string order_id);
-	std::string get_last(int i);	
+	std::string get_last(int num);	
 };
 
 int main() {
@@ -42,5 +43,20 @@ bool OrderLogger::record(const std::string order_id) {
 	}
 	file << order_id << "\n";	
 	file.close();
+	return true;
 }
 
+std::string OrderLogger::get_last(int num) {
+	std::ifstream file;
+	file.open(filename);
+	if(!file) {
+		std::cout << "Error opening file." << std::endl;
+		return "ERROR!!";
+	}	
+	std::string line;
+	for(int i {0}; i < num; i++) {
+		getline(file, line);	
+	}	
+	file.close();
+	return line;
+}
