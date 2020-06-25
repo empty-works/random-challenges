@@ -15,7 +15,14 @@
 
 #include <iostream>>
 
-int main() {
+class OrderLogger {
+	public:
+	OrderLogger();
+	void record(const int order_id);
+			
+};
 
+int main() {
+	
 	return 0;
 }
