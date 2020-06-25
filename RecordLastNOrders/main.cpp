@@ -13,13 +13,14 @@
  * space as possible.
  * */
 
-#include <iostream>>
+#include <iostream>
+#include <string>
 
 class OrderLogger {
 	public:
 	OrderLogger();
-	void record(const int order_id);
-			
+	void record(const std::string order_id);
+	std::string get_last(int i);	
 };
 
 int main() {
