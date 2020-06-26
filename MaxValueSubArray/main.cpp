@@ -18,9 +18,16 @@
  * */
 
 #include <iostream>
+#include <algorithm>
+#include <vector>
+
+void showMax(std::vector<int> int_vec, int k) {
+	for(size_t i {0}; i < int_vec.size(); i++) {
+		
+	}
+}
 
 int main() {
 	
-
 	return 0;
 }
