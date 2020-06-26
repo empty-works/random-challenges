@@ -22,9 +22,12 @@
 #include <vector>
 
 void showMax(std::vector<int> int_vec, int k) {
+	std::cout << "[ ";
 	for(size_t i {0}; i < int_vec.size(); i++) {
-		
+		int maxInt = std::max(int_vec.begin() + i, int_vec.end() + i + k);
+		std::cout << maxInt << " ";	
 	}
+	std::cout << "]" << std::endl;
 }
 
 int main() {
