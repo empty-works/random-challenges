@@ -24,14 +24,18 @@
 void showMax(std::vector<int> int_vec, int k) {
 	std::cout << "[ ";
 	for(size_t i {0}; i < int_vec.size(); i++) {
-		auto it = std::max(int_vec.begin() + i, int_vec.end() + i + k);
-		int maxInt = *it;
-		std::cout << maxInt << " ";	
+		if(i + k <= int_vec.size()) {
+			std::cout << "((" << int_vec.at(i) << " " << int_vec.at(i + 1) << " " << int_vec.at(i + (k -1)) << "))";
+			auto it = std::max_element(int_vec.begin() + i, int_vec.begin() + i + (k - 1));
+			std::cout << *it << " ";	
+		}
 	}
 	std::cout << "]" << std::endl;
 }
 
 int main() {
 	
+	std::vector<int> int_vec {10, 5, 2, 7, 8, 7};
+	showMax(int_vec, 3);
 	return 0;
 }
