@@ -10,7 +10,7 @@
  * The directory dir contains an empty sub-directory subdir1 
  * and a sub-directory subdir2 containing a file file.ext.
  *
- * The string "dir\n\tsubdir1\n\t\tfile1.ext\n\tsubsubdir1\n\tsubdir2\n\t\tsubsubdir2\n\t\t\tfile2.ext" represents:
+ * The string "dir\n\tsubdir1\n\t\tfile1.ext\n\t\tsubsubdir1\n\tsubdir2\n\t\tsubsubdir2\n\t\t\tfile2.ext" represents:
  *
  * dir
  * 	subdir1
@@ -44,8 +44,13 @@
  * */
 
 #include <iostream>
+#include <string>
 
-int main() {
-	return 0;
+int getLen(std::string str) {
+
 }
 
+int main() {
+
+	return 0;
+}
