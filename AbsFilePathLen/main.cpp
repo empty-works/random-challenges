@@ -45,9 +45,10 @@
 
 #include <iostream>
 #include <string>
+#include <algorithm>
 
 int getLen(std::string str) {
-
+	
 }
 
 int main() {
