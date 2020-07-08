@@ -11,8 +11,20 @@
  * */
 
 #include <iostream>
+#include <string>
+
+std::string encode(const std::string in_str) {
+	char current {};
+	for(size_t i {0}; i < in_str.length(); i++) {
+		if(in_str[i] != current) {
+			current = in_str[i];
+		}
+		
+	}
+}
 
 int main() {
 
+	
 	return 0;
 }
