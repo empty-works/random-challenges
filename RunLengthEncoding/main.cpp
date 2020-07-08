@@ -18,7 +18,7 @@ std::string encode(const std::string in_str) {
 	std::string new_str {};
 	int count {0};
 	for(size_t i {0}; i < in_str.length(); i++) {
-		if(in_str[i] != current) {
+		if(in_str[i] != current || i + 1 == in_str.length()) {
 			new_str += std::to_string(count) + current;
 			// Reset.
 			current = in_str[i];
