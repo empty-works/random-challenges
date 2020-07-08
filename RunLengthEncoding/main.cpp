@@ -19,7 +19,7 @@ std::string encode(const std::string in_str) {
 	int count {0};
 	for(size_t i {0}; i < in_str.length(); i++) {
 		if(in_str[i] != current) {
-			new_str += count + current;
+			new_str += std::to_string(count) + current;
 			// Reset.
 			current = in_str[i];
 			count = 0;
