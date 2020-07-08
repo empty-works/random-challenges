@@ -14,17 +14,24 @@
 #include <string>
 
 std::string encode(const std::string in_str) {
-	char current {};
+	char current {in_str[0]};
+	std::string new_str {};
+	int count {0};
 	for(size_t i {0}; i < in_str.length(); i++) {
 		if(in_str[i] != current) {
+			new_str += count + current;
+			// Reset.
 			current = in_str[i];
+			count = 0;
 		}
-		
+		count++;	
 	}
+	return new_str;
 }
 
 int main() {
 
-	
+	std::string new_str {encode("AAAABBBCCDAA")};	
+	std::cout << new_str << std::endl;
 	return 0;
 }
