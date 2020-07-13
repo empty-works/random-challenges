@@ -26,14 +26,23 @@ void sortDecque(std::vector<char> vec) {
 	}
 }
 
-void sortStrings(std::vector<char> vec) {
+std::string sortStrings(std::vector<char> vec) {
 	std::string r_str {};
 	std::string g_str {};
 	std::string b_str {};
 
 	for(char letter : vec) {
-
+		if(letter == 'R') {
+			r_str += letter;
+		}
+		else if(letter == 'G') {
+			g_str += letter;
+		}
+		else if(letter == 'B') {
+			b_str += letter;
+		}
 	}
+	return r_str + g_str + b_str;
 }
 
 int main() {
