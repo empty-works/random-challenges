@@ -17,9 +17,22 @@
 #include <vector>
 #include <decque>
 
-void sortDecque(std::decque<char> dec) {
-	for(char &letter : dec) {
-			
+void sortDecque(std::vector<char> vec) {
+	std::decque<char> dec;
+	for(char &letter : vec) {
+		if(letter == 'R') {
+						
+		}			
+	}
+}
+
+void sortStrings(std::vector<char> vec) {
+	std::string r_str {};
+	std::string g_str {};
+	std::string b_str {};
+
+	for(char letter : vec) {
+
 	}
 }
 
