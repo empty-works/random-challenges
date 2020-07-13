@@ -46,5 +46,8 @@ std::string sortStrings(std::vector<char> vec) {
 }
 
 int main() {
+	std::vector<char> vec {'G', 'B', 'R', 'R', 'B', 'R', 'G'};
+	std::string new_str {sortStrings(};
+	std::cout << new_str << std::endl;
 	return 0;
 }
