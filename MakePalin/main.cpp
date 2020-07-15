@@ -57,17 +57,13 @@ int main() {
 
 	std::string second_ {first_};
 	std::list<char> list1 {convertToList(first_)};
-	std::cout << list1 << std::endl;
 
 	std::reverse(second_.begin(), second_.end());
 	std::list<char> list2 {convertToList(second_)};
-        std::cout << list2 << std::endl;	
 
 	int size {getMatchSize(list1, list2)};
-	std::cout << size << std::endl;
 
 	std::string cutStr = first_.substr(size, first_.size() - 1);
-	std::cout << cutStr << std::endl;
 
 	std::string new_str {second_ + cutStr};
 	std::cout << new_str << std::endl;
