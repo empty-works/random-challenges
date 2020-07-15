@@ -22,8 +22,14 @@
 
 #include <iostream>
 #include <string>
+#include <list>
 
-void organize() {
+std::list<char> organize(std::string str) {
+	std::list<char> str_list;
+	for(const char letter : str) {
+		str_list.push_back(letter);
+	}
+	return str_list;
 }
 
 int main() {
