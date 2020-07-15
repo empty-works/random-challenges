@@ -23,8 +23,9 @@
 #include <iostream>
 #include <string>
 #include <list>
+#include <algorithm>
 
-std::list<char> organize(std::string str) {
+std::list<char> convertToList(std::string str) {
 	std::list<char> str_list;
 	for(const char letter : str) {
 		str_list.push_back(letter);
@@ -33,6 +34,10 @@ std::list<char> organize(std::string str) {
 }
 
 int main() {
-		
+	std::string first_ {"google"};
+	std::string second_ {"google"};
+	std::cout << convertToList(first_);
+	std::reverse(second_.begin(), second_.end());
+        std::cout << convertToList(second_);	
 	return 0;
 }
