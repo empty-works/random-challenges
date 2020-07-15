@@ -62,5 +62,8 @@ int main() {
 
 	int size {getMatchSize(list1, list2)};
 	std::cout << size << std::endl;
+
+	std::string cutStr = first_.substr(size, first_.size() - 1);
+	std::cout << cutStr << std::endl;
 	return 0;
 }
