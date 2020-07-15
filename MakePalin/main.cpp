@@ -25,6 +25,13 @@
 #include <list>
 #include <algorithm>
 
+std::ostream &operator<<(std::ostream &os, const std::list<char> &obj) {
+	for(const char letter : obj) {
+		os << letter;
+	}		
+	return os;
+}
+
 std::list<char> convertToList(std::string str) {
 	std::list<char> str_list;
 	for(const char letter : str) {
