@@ -40,11 +40,27 @@ std::list<char> convertToList(std::string str) {
 	return str_list;
 }
 
+int getMatchSize(std::list<char> list1, std::list<char> list2) {
+	if(list1.size() == list2.size()) {
+		while(list1 != list2) {
+			list1.pop_back();
+			list2.pop_front();
+		}
+	}
+	return list1.size();
+}
+
 int main() {
 	std::string first_ {"google"};
 	std::string second_ {"google"};
-	std::cout << convertToList(first_);
+	std::list<char> list1 {convertToList(first_)};
+	std::cout << list1 << std::endl;
+
 	std::reverse(second_.begin(), second_.end());
-        std::cout << convertToList(second_);	
+	std::list<char> list2 {convertToList(second_)};
+        std::cout << list2 << std::endl;	
+
+	int size {getMatchSize(list1, list2)};
+	std::cout << size << std::endl;
 	return 0;
 }
