@@ -51,8 +51,8 @@ int getMatchSize(std::list<char> list1, std::list<char> list2) {
 }
 
 int main() {
-	std::string first_ {"google"};
-	std::string second_ {"google"};
+	std::string first_ {"race"};
+	std::string second_ {"race"};
 	std::list<char> list1 {convertToList(first_)};
 	std::cout << list1 << std::endl;
 
@@ -65,5 +65,8 @@ int main() {
 
 	std::string cutStr = first_.substr(size, first_.size() - 1);
 	std::cout << cutStr << std::endl;
+
+	std::string new_str {second_ + cutStr};
+	std::cout << new_str << std::endl;
 	return 0;
 }
