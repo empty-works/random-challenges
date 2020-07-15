@@ -51,8 +51,11 @@ int getMatchSize(std::list<char> list1, std::list<char> list2) {
 }
 
 int main() {
-	std::string first_ {"race"};
-	std::string second_ {"race"};
+	std::cout << "Enter string to turn into a palindrome: ";
+	std::string first_ {};
+	std::getline(std::cin, first_);	
+
+	std::string second_ {first_};
 	std::list<char> list1 {convertToList(first_)};
 	std::cout << list1 << std::endl;
 
