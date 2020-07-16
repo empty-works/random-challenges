@@ -11,8 +11,9 @@
 
 #include <iostream>
 #include <vector>
+#include <string>
 
-void powerSet(string str, int index = -1, string curr = "")
+void powerSet(std::string str, int index = -1, std::string curr = "")
 {
     int n = str.length();
 
@@ -21,7 +22,7 @@ void powerSet(string str, int index = -1, string curr = "")
         return;
 
     // First print current subset
-    cout << curr << "\n";
+    std::cout << curr << "\n";
 
     // Try appending remaining characters
     // to current subset
@@ -41,5 +42,7 @@ void powerSet(string str, int index = -1, string curr = "")
 
 int main() {
 	
+	std::string str {"123"};
+	powerSet(str);
 	return 0;
 }
