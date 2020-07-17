@@ -21,7 +21,19 @@
  * */
 
 #include <iostream>
+#include <vector>
+#include <algorithm>
+
+void showMedian(std::vector<int> vec) {
+	std::vector<int> sort_vec;
+	for(const int num : vec) {
+		sort_vec.push_back(num);
+		std::sort(sort_vec);	
+		
+	}
+}
 
 int main() {
+
 	return 0;
 }
