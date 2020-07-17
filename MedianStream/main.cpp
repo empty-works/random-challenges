@@ -28,12 +28,16 @@ void showMedian(std::vector<int> vec) {
 	std::vector<int> sort_vec;
 	for(const int num : vec) {
 		sort_vec.push_back(num);
-		std::sort(sort_vec);	
-		
+		std::sort(sort_vec.begin(), sort_vec.end());	
+			
 	}
 }
 
-int main() {
+double getEvenMedian(int first, int second) {
+	return (double)second / (double) first;
+}
 
+int main() {
+	std::cout << getEvenMedian(3, 5) << std::endl;
 	return 0;
 }
