@@ -27,22 +27,31 @@
 double getEvenMedian(std::vector<int> vec) {
 	int firstIndex {(int)vec.size() / 2};
 	int secondIndex {firstIndex + 1};
+	std::cout << firstIndex << std::endl;
+	std::cout << secondIndex << std::endl;
 	return (double)(vec.at(secondIndex) + vec.at(firstIndex)) / 2.0;
 }
 
-double showMedian(std::vector<int> vec) {
+double getOddMedian(std::vector<int> vec) {
+
+}
+
+void showMedian(std::vector<int> vec) {
 	std::vector<int> sort_vec;
 	for(const int num : vec) {
 		sort_vec.push_back(num);
 		std::sort(sort_vec.begin(), sort_vec.end());	
-		if(vec.size() % 2 == 0) {
-			return getEvenMedian(sort_vec);
+		if(sort_vec.size() == 1) {
+			std::cout << sort_vec.at(0) << std::endl;
+		}
+		if(sort_vec.size() % 2 == 0) {
+			std::cout << getEvenMedian(sort_vec) << std::endl;
 		}	
 	}
 }
 
 int main() {
 	std::vector<int> vec {2, 1, 5, 7};
-	std::cout << showMedian(vec) << std::endl;
+	showMedian(vec);
 	return 0;
 }
