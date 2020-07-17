@@ -24,20 +24,25 @@
 #include <vector>
 #include <algorithm>
 
-void showMedian(std::vector<int> vec) {
+double getEvenMedian(std::vector<int> vec) {
+	int firstIndex {(int)vec.size() / 2};
+	int secondIndex {firstIndex + 1};
+	return (double)(vec.at(secondIndex) + vec.at(firstIndex)) / 2.0;
+}
+
+double showMedian(std::vector<int> vec) {
 	std::vector<int> sort_vec;
 	for(const int num : vec) {
 		sort_vec.push_back(num);
 		std::sort(sort_vec.begin(), sort_vec.end());	
-			
+		if(vec.size() % 2 == 0) {
+			return getEvenMedian(sort_vec);
+		}	
 	}
 }
 
-double getEvenMedian(int first, int second) {
-	return (double)second / (double) first;
-}
-
 int main() {
-	std::cout << getEvenMedian(3, 5) << std::endl;
+	std::vector<int> vec {2, 1, 5, 7};
+	std::cout << showMedian(vec) << std::endl;
 	return 0;
 }
