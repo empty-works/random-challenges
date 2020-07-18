@@ -49,9 +49,9 @@ void showMedian(std::vector<int> vec) {
 		else if(sort_vec.size() % 2 == 0) {
 			std::cout << getEvenMedian(sort_vec) << std::endl;
 		}
-		else {
-			std::cout << getOddMedian(sort_vec) << std::endl;
-		}	
+		//else {
+		//	std::cout << getOddMedian(sort_vec) << std::endl;
+	//	}	
 	}
 }
 
