@@ -31,9 +31,9 @@ double getEvenMedian(const std::vector<int> &vec) {
 	return top_num / 2.0;
 }
 
-double getOddMedian(const std::vector<int> &vec) {
-	std::cout << "Inside getOddMedian" << std::endl;
-	return 4.5;	
+int getOddMedian(const std::vector<int> &vec) {
+	int middleIndex {(int)(vec.size() / 2)}; // No need to add + 1 because it is an index.
+	return vec.at(middleIndex);
 }
 
 void showMedian(std::vector<int> vec) {
@@ -41,7 +41,6 @@ void showMedian(std::vector<int> vec) {
 	for(const int num : vec) {
 		sort_vec.push_back(num);
 		std::sort(sort_vec.begin(), sort_vec.end());	
-		std::cout << "Vector size: " << sort_vec.size() << std::endl;
 		if(sort_vec.size() == 1) {
 			std::cout << sort_vec.at(0) << std::endl;
 		}
@@ -55,7 +54,7 @@ void showMedian(std::vector<int> vec) {
 }
 
 int main() {
-	std::vector<int> vec {2, 1, 5, 7};
+	std::vector<int> vec {2, 1, 5, 7, 2, 0, 5};
 	showMedian(vec);
 	return 0;
 }
