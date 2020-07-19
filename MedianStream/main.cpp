@@ -27,7 +27,7 @@
 double getEvenMedian(const std::vector<int> &vec) {
 	int firstIndex {((int)vec.size() / 2) - 1};
 	int secondIndex {firstIndex + 1};
-	double top_num {vec.at(secondIndex) + vec.at(firstIndex)};
+	double top_num {(double)vec.at(secondIndex) + (double)vec.at(firstIndex)};
 	return top_num / 2.0;
 }
 
