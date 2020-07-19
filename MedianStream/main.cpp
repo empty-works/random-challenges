@@ -25,11 +25,10 @@
 #include <algorithm>
 
 double getEvenMedian(const std::vector<int> &vec) {
-	int firstIndex {(int)vec.size() / 2};
+	int firstIndex {((int)vec.size() / 2) - 1};
 	int secondIndex {firstIndex + 1};
-	std::cout << firstIndex << std::endl;
-	std::cout << secondIndex << std::endl;
-	return (double)vec.at(secondIndex) + (double)vec.at(firstIndex) / 2.0;
+	double top_num {vec.at(secondIndex) + vec.at(firstIndex)};
+	return top_num / 2.0;
 }
 
 double getOddMedian(const std::vector<int> &vec) {
@@ -49,9 +48,9 @@ void showMedian(std::vector<int> vec) {
 		else if(sort_vec.size() % 2 == 0) {
 			std::cout << getEvenMedian(sort_vec) << std::endl;
 		}
-		//else {
-		//	std::cout << getOddMedian(sort_vec) << std::endl;
-	//	}	
+		else {
+			std::cout << getOddMedian(sort_vec) << std::endl;
+		}	
 	}
 }
 
