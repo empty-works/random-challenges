@@ -26,7 +26,8 @@
 #include <utility>
 #include <vector>
 
-void getItinerary(std::vector<const std::pair<std::string, std::string>> &vec, const std::string start) {
+std::vector<std::string> getItinerary(std::vector<const std::pair<std::string, std::string>> &vec, const std::string start) {
+	std::vector<std::string> new_vec {start};
 	std::string start_str {start};	
 	for(std::pair<std::string, std::string> pair_first : vec) {
 		if(
