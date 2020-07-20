@@ -13,6 +13,7 @@
  *
  * Given the list of flights [("SFO", "COM"), ("COM", "YYZ")] 
  * and starting airport "COM", you should return null.
+ *
  * Given the list of flights [("A", "B"), ("A", "C"), ("B", "C"), 
  * ("C", "A")] and starting airport "A", you should return 
  * the list ["A", "B", "C", "A", "C"] even though 
@@ -25,8 +26,11 @@
 #include <utility>
 #include <vector>
 
-void getItinerary(std::vector<std::pair<std::string, std::string>> vec, std::string start) {
-		
+void getItinerary(std::vector<const std::pair<std::string, std::string>> &vec, const std::string start) {
+	std::string start_str {start};	
+	for(std::pair<std::string, std::string> pair_first : vec) {
+		if(
+	}		
 }
 
 int main() {
