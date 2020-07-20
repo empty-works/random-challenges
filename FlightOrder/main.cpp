@@ -26,12 +26,16 @@
 #include <utility>
 #include <vector>
 
-std::vector<std::string> getItinerary(std::vector<const std::pair<std::string, std::string>> &vec, const std::string start) {
+std::vector<std::string> getItinerary(std::vector<std::pair<std::string, std::string>> &vec, const std::string start) {
 	std::vector<std::string> new_vec {start};
 	std::string start_str {start};	
-	for(std::pair<std::string, std::string> pair_first : vec) {
-		if(
+	for(std::pair<std::string, std::string> the_pair: vec) {
+		if(the_pair.first == start_str) {
+			new_vec.push_back(the_pair.second);
+			start_str = the_pair.second;
+		}
 	}		
+	return new_vec;
 }
 
 int main() {
