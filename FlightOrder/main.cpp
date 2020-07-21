@@ -31,6 +31,7 @@ std::vector<std::string> getItinerary(std::vector<std::pair<std::string, std::st
 	std::vector<std::string> new_vec {start};
 	std::string start_str {start};	
 	int count {0};
+	std::sort(vec.begin(), vec.end(), [](auto left, auto right){return left.first < right.first;});
 	while(count < vec.size()) {
 		for(std::pair<std::string, std::string> the_pair: vec) {
 			if(the_pair.first == start_str) {
