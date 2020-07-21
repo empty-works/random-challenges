@@ -30,15 +30,17 @@
 std::vector<std::string> getItinerary(std::vector<std::pair<std::string, std::string>> &vec, const std::string start) {
 	std::vector<std::string> new_vec {start};
 	std::string start_str {start};	
-	auto temp_vec {vec};
-	std::sort(vec.begin(), vec.end(), [](auto &left, auto &right){return left.first < right.first;});	
-	for(std::pair<std::string, std::string> the_pair: temp_vec) {
-			
-		if(the_pair.first == start_str) {
-			new_vec.push_back(the_pair.second);
-			start_str = the_pair.second;
-		}
-	}		
+	int count {0};
+	while(count < vec.size()) {
+		for(std::pair<std::string, std::string> the_pair: vec) {
+				
+			if(the_pair.first == start_str) {
+				new_vec.push_back(the_pair.second);
+				start_str = the_pair.second;
+			}
+		}		
+		count++;
+	}
 	return new_vec;
 }
 
