@@ -34,7 +34,7 @@ std::vector<std::string> getItinerary(std::vector<std::pair<std::string, std::st
 	while(count < vec.size()) {
 		for(std::pair<std::string, std::string> the_pair: vec) {
 			if(the_pair.first == start_str) {
-				start_str = the_pair.first;
+				start_str = the_pair.second;
 				new_vec.push_back(the_pair.second);
 			}
 		}		
@@ -49,7 +49,11 @@ int main() {
 		{"YYZ", "SFO"}, 
 		{"YUL", "YYZ"}, 
 		{"HKO", "ORD"}};
-
+	auto new_vec {getItinerary(pair_vec, "YUL")};		
+	for(auto text : new_vec) {
+		std::cout << text << " ";
+	}
+	std::cout << std::endl;
 
 	return 0;
 }
