@@ -21,6 +21,10 @@
 
 #include <iostream>
 
+int getInversions(std::vector<int> vec) {
+
+}
+
 int main() {
 	return 0;
 }
