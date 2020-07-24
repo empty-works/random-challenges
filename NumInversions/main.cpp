@@ -20,8 +20,9 @@
  * */
 
 #include <iostream>
+#define MAX 100
 
-int getInversions(std::vector<int> vec, int row, int col) {
+int getInversions(int arr[][MAX], int row, int col) {
 	
 }
 
