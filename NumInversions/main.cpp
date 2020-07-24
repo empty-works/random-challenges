@@ -23,7 +23,16 @@
 #define MAX 100
 
 int getInversions(int arr[][MAX], int row, int col) {
-	
+	int i = m-1, j = 0;  //set indexes for bottom left element 
+   	while ( i >= 0 && j < n ) 
+	{ 
+		if ( mat[i][j] == x ) 
+		 	return true; 
+		if ( mat[i][j] > x ) 
+			i--; 
+		else //  if mat[i][j] < x 
+			j++; 
+	} 	
 }
 
 int main() {
