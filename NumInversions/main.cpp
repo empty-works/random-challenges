@@ -21,8 +21,8 @@
 
 #include <iostream>
 
-int getInversions(std::vector<int> vec) {
-
+int getInversions(std::vector<int> vec, int row, int col) {
+	
 }
 
 int main() {
