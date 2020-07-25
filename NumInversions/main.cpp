@@ -24,8 +24,8 @@
 
 int getInversions(int arr[][MAX], int row, int col) {
 	int count {0};
-	int i = m-1, j = 0;  //set indexes for bottom left element 
-   	while ( i >= 0 && j < n ) 
+	int i = m-1, j = 1;  //set indexes for bottom left element 
+   	while ( i >= 0 && j <= n ) 
 	{ 
 		if ( mat[i] > mat[j] && i < j) 
 			count++;
