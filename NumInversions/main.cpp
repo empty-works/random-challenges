@@ -48,6 +48,7 @@ int getInversions(std::vector<int> vec) {
 			}	
 		}
 	}
+	return count;
 }	
 
 int main() {
@@ -60,5 +61,8 @@ int main() {
 	int nums = getInversions(mat, 5, 6);
 	std::cout << std::to_string(nums) << std::endl;
 	*/
+	std::vector<int> vec {5, 4, 3, 2, 1};
+	int count {getInversions(vec)};
+	std::cout << std::to_string(count) << std::endl;
 	return 0;
 }
