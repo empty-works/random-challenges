@@ -43,7 +43,9 @@ int getInversions(std::vector<int> vec) {
 	int count {0};
 	for(size_t i {0}; i < vec.size(); i++) {
 		for(size_t j {0}; j < vec.size(); j++) {
-			
+			if(vec.at(i) > vec.at(j) && i < j) {
+				count++;
+			}	
 		}
 	}
 }	
