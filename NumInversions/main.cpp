@@ -20,8 +20,10 @@
  * */
 
 #include <iostream>
+#include <vector>
 #define MAX 100
 
+/*
 int getInversions(int mat[][MAX], int row, int col) {
 	int count {0};
 	int i = row-1, j = 1;  //set indexes for bottom left element 
@@ -29,14 +31,25 @@ int getInversions(int mat[][MAX], int row, int col) {
 	{ 
 		if ( mat[i] > mat[j] && i < j) 
 			count++;
-		if ( mat[i][j] > x ) 
+		//if ( mat[i][j] > x) 
 			i--; 
-		else //  if mat[i][j] < x 
+		//else //  if mat[i][j] < x 
 			j++; 
 	} 	
 }
+*/
+
+int getInversions(std::vector<int> vec) {
+	int count {0};
+	for(size_t i {0}; i < vec.size(); i++) {
+		for(size_t j {0}; j < vec.size(); j++) {
+			
+		}
+	}
+}	
 
 int main() {
+	/*
 	int mat[][MAX] {{2, 2, 4, 1, 3, 5},
 			{4, 2, 4, 1, 3, 5},
 			{1, 2, 4, 1, 3, 5},
@@ -44,5 +57,6 @@ int main() {
 			{5, 2, 4, 1, 3, 5}};
 	int nums = getInversions(mat, 5, 6);
 	std::cout << std::to_string(nums) << std::endl;
+	*/
 	return 0;
 }
