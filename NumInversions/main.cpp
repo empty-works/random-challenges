@@ -22,10 +22,10 @@
 #include <iostream>
 #define MAX 100
 
-int getInversions(int arr[][MAX], int row, int col) {
+int getInversions(int mat[][MAX], int row, int col) {
 	int count {0};
-	int i = m-1, j = 1;  //set indexes for bottom left element 
-   	while ( i >= 0 && j <= n ) 
+	int i = row-1, j = 1;  //set indexes for bottom left element 
+   	while ( i >= 0 && j <= col ) 
 	{ 
 		if ( mat[i] > mat[j] && i < j) 
 			count++;
@@ -42,5 +42,7 @@ int main() {
 			{1, 2, 4, 1, 3, 5},
 			{3, 2, 4, 1, 3, 5}
 			{5, 2, 4, 1, 3, 5}};
+	int nums = getInversions(mat, 5, 6);
+	std::cout << std::to_string(nums) << std::endl;
 	return 0;
 }
