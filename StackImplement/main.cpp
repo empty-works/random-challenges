@@ -17,13 +17,18 @@
 #include <vector>
 
 template<typename T>
-class new_stack {
+class NewStack {
 	std::vector<T> vec;
 	public:
 	void push(T val);	
 	T pop();
 	T max();
 };
+
+template<typename T>
+void NewStack<T>::push(T val) {
+	vec.push_back(val);
+}
 
 int main() {
 	return 0;
