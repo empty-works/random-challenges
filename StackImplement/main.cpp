@@ -15,10 +15,11 @@
 
 #include <iostream>
 #include <vector>
+#include <deque>
 
 template<typename T>
 class NewStack {
-	std::vector<T> vec;
+	std::deque<T> dec;
 	public:
 	void push(T val);	
 	T pop();
@@ -27,7 +28,12 @@ class NewStack {
 
 template<typename T>
 void NewStack<T>::push(T val) {
-	vec.push_back(val);
+	dec.push_back(val);
+}
+
+template<typename T>
+T NewStack<T>::pop() {
+	return dec.pop_front();	
 }
 
 int main() {
