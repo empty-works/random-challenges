@@ -14,6 +14,16 @@
  * */
 
 #include <iostream>
+#include <vector>
+
+template<typename T>
+class new_stack {
+	std::vector<T> vec;
+	public:
+	void push(T val);	
+	T pop();
+	T max();
+};
 
 int main() {
 	return 0;
