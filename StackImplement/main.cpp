@@ -16,6 +16,7 @@
 #include <iostream>
 #include <vector>
 #include <deque>
+#include <algorithm>
 
 template<typename T>
 class NewStack {
@@ -33,10 +34,29 @@ void NewStack<T>::push(const T &val) {
 
 template<typename T>
 T NewStack<T>::pop() {
-	return dec.pop_front();	
+	T val = dec.at(0);
+	dec.pop_front();	
+	return val;
+}
+
+template<typename T>
+T NewStack<T>::max() {	
+	T max {dec.at(0)};
+	for(T val : dec) {
+		if(max < val) {
+			max = val;
+		}		
+	}
+	return max;
 }
 
 int main() {
 
+	NewStack<int> ns;
+	ns.push(1);
+	ns.push(2);
+	ns.push(3);
+	std::cout << ns.pop() << std::endl;
+	std::cout << ns.max() << std::endl;
 	return 0;
 }
