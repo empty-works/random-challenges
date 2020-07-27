@@ -21,13 +21,13 @@ template<typename T>
 class NewStack {
 	std::deque<T> dec;
 	public:
-	void push(T val);	
+	void push(const T &val);	
 	T pop();
 	T max();
 };
 
 template<typename T>
-void NewStack<T>::push(T val) {
+void NewStack<T>::push(const T &val) {
 	dec.push_back(val);
 }
 
@@ -37,5 +37,6 @@ T NewStack<T>::pop() {
 }
 
 int main() {
+
 	return 0;
 }
