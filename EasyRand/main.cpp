@@ -6,7 +6,10 @@
  * */
 
 #include <iostream>
+#include <cstdlib>
 
 int main() {
+	int new_num = rand() % 7 + 1;
+	std::cout << new_num << std::endl;
 	return 0;
 }
