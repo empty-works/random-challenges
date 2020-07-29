@@ -8,8 +8,11 @@
 #include <iostream>
 #include <cstdlib>
 
-int main() {
+int get_num() {
 	int new_num = rand() % 7 + 1;
-	std::cout << new_num << std::endl;
+	return new_num;
+}
+
+int main() {
 	return 0;
 }
