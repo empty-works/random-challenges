@@ -14,5 +14,8 @@ int get_num() {
 }
 
 int main() {
+	for(size_t i {0}; i < 10; i++) {
+		std::cout << get_num() << std::endl;
+	}
 	return 0;
 }
