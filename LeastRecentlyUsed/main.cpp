@@ -16,6 +16,15 @@
  * */
 
 #include <iostream>
+#include <string>
+
+void set(std::string key, int value) {
+	
+}
+
+int get(std::string key) {
+
+}
 
 int main() {
 	return 0;
