@@ -22,8 +22,8 @@ void set(std::string key, int value) {
 	
 }
 
-int get(std::string key) {
-
+int get(std::map<std::string, int> &the_map) {
+	int val {the_map	
 }
 
 int main() {
