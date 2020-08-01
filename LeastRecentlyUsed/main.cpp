@@ -18,12 +18,17 @@
 #include <iostream>
 #include <string>
 
-class the_cache {
+class TheCache{
 	void set(std::string key, int value);
 	int get(std::map<std::string, int> &the_map);
 };
 
+void TheCache::set(std::string key, int value) {
+}
+
+int TheCache::get(
 
 int main() {
+
 	return 0;
 }
