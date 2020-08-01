@@ -20,13 +20,16 @@
 
 class TheCache{
 	void set(std::string key, int value);
-	int get(std::map<std::string, int> &the_map);
+	int get(std::vector<std::pair<std::string, int>>);
 };
 
 void TheCache::set(std::string key, int value) {
+
 }
 
-int TheCache::get(
+int TheCache::get(std::vector<std::pair<std::string, int>> &vec) {
+
+}
 
 int main() {
 
