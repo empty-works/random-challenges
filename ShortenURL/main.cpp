@@ -12,9 +12,12 @@
 
 #include <iostream>
 #include <string>
+#include <vector>
+#include <random>
+#include <algorithm>
 
 class Shortener {
-	std::string main_url{};	
+	std::vector<std::pair<std::string, std::string>> vec {};
 	
 	public:
 	std::string shorten(const std::string &url);
@@ -22,11 +25,25 @@ class Shortener {
 };
 
 std::string Shortener::shorten(const std::string &url) {
-	main_url = url;
-	return "zlg6wl";	
+	int length {6};
+	auto randchar = []() -> char {
+		const char charset[] {
+			"0123456789"
+			"ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+			"abcdefghijklmnopqrstuvwxyz"
+		};
+		const size_t max_index {sizeof(charset) - 1};
+		return charset[std::rand() % max_index];	
+	};	
+	std::string str(length, 0);
+	std::generate_n(str.begin(), length, randchar);	
+	return str;
+}
+
+std::string Shortener::restore(const std::string &short_url) {
+	
 }
 
 int main() {
-
 	return 0;
 }
