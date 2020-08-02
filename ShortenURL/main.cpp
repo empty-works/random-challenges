@@ -14,7 +14,7 @@
 #include <string>
 
 class Shortener {
-	std::string url {};	
+	std::string main_url{};	
 	
 	public:
 	std::string shorten(const std::string &url);
@@ -22,7 +22,8 @@ class Shortener {
 };
 
 std::string Shortener::shorten(const std::string &url) {
-	
+	main_url = url;
+	return "zlg6wl";	
 }
 
 int main() {
