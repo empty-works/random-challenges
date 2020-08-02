@@ -11,7 +11,13 @@
  * */
 
 #include <iostream>
+#include <string>
+
+class Shortener {
+	
+};
 
 int main() {
+
 	return 0;
 }
