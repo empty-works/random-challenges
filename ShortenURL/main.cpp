@@ -17,12 +17,12 @@ class Shortener {
 	std::string url {};	
 	
 	public:
-	std::string shorten(std::string url);
-	std::string restore(std::string short_url);
+	std::string shorten(const std::string &url);
+	std::string restore(const std::string &short_url);
 };
 
-std::string Shortener::shorten(std::string url) {
-
+std::string Shortener::shorten(const std::string &url) {
+	
 }
 
 int main() {
