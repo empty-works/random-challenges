@@ -18,8 +18,12 @@ class Shortener {
 	
 	public:
 	std::string shorten(std::string url);
-	std::string restore(std::string short);
+	std::string restore(std::string short_url);
 };
+
+std::string Shortener::shorten(std::string url) {
+
+}
 
 int main() {
 
