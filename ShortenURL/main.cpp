@@ -14,7 +14,11 @@
 #include <string>
 
 class Shortener {
+	std::string url {};	
 	
+	public:
+	std::string shorten(std::string url);
+	std::string restore(std::string short);
 };
 
 int main() {
