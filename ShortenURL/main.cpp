@@ -20,12 +20,12 @@ class Shortener {
 	std::vector<std::pair<std::string, std::string>> vec {};
 	
 	public:
+	std::string generate_short(const int length);
 	std::string shorten(const std::string &url);
 	std::string restore(const std::string &short_url);
 };
 
-std::string Shortener::shorten(const std::string &url) {
-	int length {6};
+std::string Shortener::generate_short(const int length) {
 	auto randchar = []() -> char {
 		const char charset[] {
 			"0123456789"
@@ -40,10 +40,16 @@ std::string Shortener::shorten(const std::string &url) {
 	return str;
 }
 
+std::string Shortener::shorten(const std::string &url) {
+
+}
+
 std::string Shortener::restore(const std::string &short_url) {
 	
 }
 
 int main() {
+	Shortener s;
+	std::cout << s.shorten("someURL") << std::endl; 
 	return 0;
 }
