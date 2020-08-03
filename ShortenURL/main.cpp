@@ -21,6 +21,7 @@ class Shortener {
 	
 	public:
 	std::string generate_short(const int length);
+	bool is_found(std::vector<std::pair<std::string, std::string>> vec);
 	std::string shorten(const std::string &url);
 	std::string restore(const std::string &short_url);
 };
@@ -39,11 +40,18 @@ std::string Shortener::generate_short(const int length) {
 	std::generate_n(str.begin(), length, randchar);	
 	return str;
 }
+	
+bool Shortener::is_found(std::vector<std::pair<std::string, std::string>> vec) {
+
+}
 
 std::string Shortener::shorten(const std::string &url) {
-	std::string short_url {generate_short(6)};
+	std::string short_url{};
+
+	short_url = generate_short(6);
 	std::pair<std::string, std::string> the_pair(url, short_url);
 	vec.push_back(the_pair);	
+	return short_url;
 }
 
 std::string Shortener::restore(const std::string &short_url) {
