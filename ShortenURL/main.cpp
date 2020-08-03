@@ -41,7 +41,9 @@ std::string Shortener::generate_short(const int length) {
 }
 
 std::string Shortener::shorten(const std::string &url) {
-
+	std::string short_url {generate_short(6)};
+	std::pair<std::string, std::string> the_pair(url, short_url);
+	vec.push_back(the_pair);	
 }
 
 std::string Shortener::restore(const std::string &short_url) {
