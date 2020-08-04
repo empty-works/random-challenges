@@ -74,7 +74,12 @@ std::string Shortener::shorten(const std::string &url) {
 }
 
 std::string Shortener::restore(const std::string &short_url) {
-	
+	for(auto a_pair : vec) {
+		if(a_pair.second == short_url) {
+			return a_pair.first;
+		}
+	}	
+	return "";
 }
 
 int main() {
