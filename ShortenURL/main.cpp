@@ -63,12 +63,14 @@ std::string Shortener::get_short_url(const std::string &url) {
 std::string Shortener::shorten(const std::string &url) {
 	std::string short_url{};
 	if(url_is_found(vec, url)) {
-					
+		return get_short_url(url);				
 	}
-	short_url = generate_short(6);
-	std::pair<std::string, std::string> the_pair(url, short_url);
-	vec.push_back(the_pair);	
-	return short_url;
+	else {
+		short_url = generate_short(6);
+		std::pair<std::string, std::string> the_pair(url, short_url);
+		vec.push_back(the_pair);	
+		return short_url;
+	}
 }
 
 std::string Shortener::restore(const std::string &short_url) {
