@@ -84,6 +84,8 @@ std::string Shortener::restore(const std::string &short_url) {
 
 int main() {
 	Shortener s;
-	std::cout << s.shorten("someURL") << std::endl; 
+	std::string short_url {s.shorten("someURL")};
+	std::cout << short_url << std::endl; 
+	std::cout << s.restore(short_url) << std::endl;
 	return 0;
 }
