@@ -22,6 +22,7 @@ class Shortener {
 	public:
 	std::string generate_short(const int length);
 	bool is_found(const std::vector<std::pair<std::string, std::string>> &vec, const std::string &url);
+	std::string get_short(const std::string &url);
 	std::string shorten(const std::string &url);
 	std::string restore(const std::string &short_url);
 };
@@ -41,7 +42,7 @@ std::string Shortener::generate_short(const int length) {
 	return str;
 }
 	
-bool Shortener::is_found(const std::vector<std::pair<std::string, std::string>> &vec, const std::string &url) {
+bool Shortener::url_is_found(const std::vector<std::pair<std::string, std::string>> &vec, const std::string &url) {
 	for(auto a_pair : vec) {
 		if(a_pair.first == url) {
 			return true;
@@ -50,9 +51,15 @@ bool Shortener::is_found(const std::vector<std::pair<std::string, std::string>> 
 	return false;
 }
 
+std::string Shortener::get_short(const std::string &url) {
+
+}
+
 std::string Shortener::shorten(const std::string &url) {
 	std::string short_url{};
-
+	if(url_is_found(vec, url)) {
+					
+	}
 	short_url = generate_short(6);
 	std::pair<std::string, std::string> the_pair(url, short_url);
 	vec.push_back(the_pair);	
