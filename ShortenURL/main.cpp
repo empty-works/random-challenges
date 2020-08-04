@@ -43,8 +43,11 @@ std::string Shortener::generate_short(const int length) {
 	
 bool Shortener::is_found(const std::vector<std::pair<std::string, std::string>> &vec, const std::string &url) {
 	for(auto a_pair : vec) {
-		if(
+		if(a_pair.first == url) {
+			return true;
+		}
 	}
+	return false;
 }
 
 std::string Shortener::shorten(const std::string &url) {
