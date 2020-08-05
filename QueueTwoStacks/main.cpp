@@ -16,6 +16,15 @@ class MyQueue {
 	void dequeue();
 };
 
+template<typename T>
+void MyQueue<T>::enqueue(T obj) {
+	vec1.push_back(obj);
+	vec2.clear();
+	for(size_t i {vec1.size() - 1}; i >= 0; i--) {
+		vec2.push_back(vec1.at(i));	
+	}
+}
+
 int main() {
 
 	return 0;
