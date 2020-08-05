@@ -8,6 +8,14 @@
 #include <vector>
 
 template<typename T>
+std::ostream &operator<<(std::ostream &os, std::vector<T> &vec) {
+	for(auto obj : vec) {
+		os << obj;
+	}
+	return os;
+}
+
+template<typename T>
 class MyQueue {
 	std::vector<T> vec1;
 	std::vector<T> vec2;
