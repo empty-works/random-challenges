@@ -9,6 +9,11 @@
 
 template<typename T>
 class MyQueue {
+	std::vector<T> vec1;
+	std::vector<T> vec2;
+	public:
+	void enqueue(T obj);
+	void dequeue();
 };
 
 int main() {
