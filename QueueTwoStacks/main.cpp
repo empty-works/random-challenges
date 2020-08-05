@@ -19,8 +19,8 @@ std::ostream &operator<<(std::ostream &os, std::vector<T> &vec) {
 
 template<typename T>
 class MyQueue {
-	public:
 	std::vector<T> vec1;
+	public:
 	std::vector<T> vec2;
 	void enqueue(T obj);
 	void dequeue();
@@ -38,18 +38,24 @@ void MyQueue<T>::enqueue(T obj) {
 
 template<typename T>
 void MyQueue<T>::dequeue() {
-	vec1.pop_back();
-	std::cout << "Popping: " << vec2.at(vec2.size() - 1);
-	vec2.pop_back();
+	if(vec1.size() > 0 && vec2.size() > 0) {
+		vec1.pop_back();
+		std::cout << "Popping: " << vec1.at(0) << std::endl;
+		vec2.pop_back();
+	}
 }
 
 int main() {
 	MyQueue<std::string> mq;
 	mq.enqueue("Hello");
+	std::cout << mq.vec2 << std::endl;
 	mq.enqueue("There");
+	std::cout << mq.vec2 << std::endl;
 	mq.enqueue("Nope");
+	std::cout << mq.vec2 << std::endl;
 	mq.enqueue("Yup");
-	std::cout << mq.vec1 << std::endl;
-	std::cout << mq.vec2 << std::endl;	
+	std::cout << mq.vec2 << std::endl;
+	mq.dequeue();
+	std::cout << mq.vec2 << std::endl;
 	return 0;
 }
