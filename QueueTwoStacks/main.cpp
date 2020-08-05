@@ -5,7 +5,13 @@
  * */
 
 #include <iostream>
+#include <vector>
+
+template<typename T>
+class MyQueue {
+};
 
 int main() {
+
 	return 0;
 }
