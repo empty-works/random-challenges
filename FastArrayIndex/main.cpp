@@ -18,8 +18,8 @@
 #include <algorithm>
 #include <vector>
 
-int get_index(int element) {
-
+int get_index(std::vector<int> vec, int element) {
+	
 }
 
 int main() {
