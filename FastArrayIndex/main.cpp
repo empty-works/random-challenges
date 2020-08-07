@@ -15,7 +15,14 @@
  * */
 
 #include <iostream>
+#include <algorithm>
+#include <vector>
+
+int get_index(int element) {
+
+}
 
 int main() {
+	
 	return 0;
 }
