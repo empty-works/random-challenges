@@ -18,9 +18,35 @@
 #include <algorithm>
 #include <vector>
 
-int get_index(std::vector<int> vec, int element) {
+int getIndex(std::vector<int> vec, int element) {
+	std::sort(vec.begin(), vec.end());	
 	
 }
+
+int binarySearch(std::vector<int> vec, int l, int r, int x) 
+{ 
+    if (r >= l) { 
+        int mid = l + (r - l) / 2; 
+  
+        // If the element is present at the middle 
+        // itself 
+        if (vec.at(mid) == x) 
+            return mid; 
+  
+        // If element is smaller than mid, then 
+        // it can only be present in left subarray 
+        if (vec.at(mid) > x) 
+            return binarySearch(arr, l, mid - 1, x); 
+  
+        // Else the element can only be present 
+        // in right subarray 
+        return binarySearch(vec, mid + 1, r, x); 
+    } 
+  
+    // We reach here when element is not 
+    // present in array 
+    return -1; 
+} 
 
 int main() {
 	
