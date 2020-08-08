@@ -20,6 +20,7 @@
 
 int getIndex(std::vector<int> &vec, int element) {
 	std::sort(vec.begin(), vec.end());	
+	return binarySearch(vec, 0, vec.size() - 1, element);
 }
 
 int binarySearch(std::vector<int> &vec, int l, int r, int x) 
