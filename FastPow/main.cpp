@@ -50,5 +50,13 @@ int pow(int x, int y) {
 }
 
 int main() {
+	int multiplier {0};
+	int power {0};
+
+	std::cout << "Enter multiplier: ";
+	std::cin >> multiplier;
+	std::cout << "Enter exponent: ";
+	std::cin >> power;
+	std::cout << "Result: " << pow(multiplier, power) << std::endl;
 	return 0;
 }
