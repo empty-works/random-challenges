@@ -11,7 +11,11 @@
 #include <iostream>
 
 int pow(int x, int y) {
-	
+	int firstProduct {0};
+	int secondProduct {0};
+	int halfMultiplier {0};
+
+	if(y % 2 == 0) 
 }
 
 int main() {
