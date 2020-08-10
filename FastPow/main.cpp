@@ -16,6 +16,15 @@ int pow(int x, int y) {
 	int halfMultiplier {0};
 	bool powIsEven {true};
 
+	if(y == 0) {
+		return 1;
+	}
+	if(y == 1) {
+		return x;
+	}
+	if(y == 2) {
+		return x * x;
+	}
 	// Check if the power is even. Then split.
 	if(y % 2 == 0) {
 		halfMultiplier = y / 2;
