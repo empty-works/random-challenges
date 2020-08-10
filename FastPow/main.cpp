@@ -14,8 +14,15 @@ int pow(int x, int y) {
 	int firstProduct {0};
 	int secondProduct {0};
 	int halfMultiplier {0};
+	bool powIsEven {true};
 
-	if(y % 2 == 0) 
+	if(y % 2 == 0) {
+		halfMultiplier = y / 2;
+	}	
+	else {
+		powIsEven = false;
+		halfMultiplier = (y - 1) / 2;
+	}
 }
 
 int main() {
