@@ -16,6 +16,7 @@ int pow(int x, int y) {
 	int halfMultiplier {0};
 	bool powIsEven {true};
 
+	// Check for edges cases.
 	if(y == 0) {
 		return 1;
 	}
@@ -25,6 +26,7 @@ int pow(int x, int y) {
 	if(y == 2) {
 		return x * x;
 	}
+
 	// Check if the power is even. Then split.
 	if(y % 2 == 0) {
 		halfMultiplier = y / 2;
@@ -37,6 +39,13 @@ int pow(int x, int y) {
 	for(int i {0}; i < halfMultiplier; i++) {
 		firstProduct *= x;	
 		secondProduct *= x;
+	}
+
+	if(powIsEven) {
+		return firstProduct * secondProduct;
+	}
+	else {
+		return firstProduct * secondProduct * x;
 	}
 }
 
