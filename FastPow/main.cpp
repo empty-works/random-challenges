@@ -11,17 +11,23 @@
 #include <iostream>
 
 int pow(int x, int y) {
-	int firstProduct {0};
-	int secondProduct {0};
+	int firstProduct {1};
+	int secondProduct {1};
 	int halfMultiplier {0};
 	bool powIsEven {true};
 
+	// Check if the power is even. Then split.
 	if(y % 2 == 0) {
 		halfMultiplier = y / 2;
 	}	
 	else {
 		powIsEven = false;
 		halfMultiplier = (y - 1) / 2;
+	}
+
+	for(int i {0}; i < halfMultiplier; i++) {
+		firstProduct *= x;	
+		secondProduct *= x;
 	}
 }
 
