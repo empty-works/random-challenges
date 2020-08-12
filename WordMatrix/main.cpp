@@ -17,6 +17,12 @@
  * */
 
 #include <iostream>
+#include <vector>
+#include <string>
+
+bool isInMatrix(std::vector<std::string, std::string> vec) {
+
+}
 
 int main() {
 	return 0;
