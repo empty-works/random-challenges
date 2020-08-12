@@ -21,7 +21,10 @@
 #include <string>
 
 bool isInMatrix(std::vector<std::string> vec) {
-	
+	for(int i {0}; i < vec.size(); i++) {
+		for(int j {0}; j < vec[i].size(); j++) {
+		}
+	}	
 }
 
 int main() {
