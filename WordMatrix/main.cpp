@@ -20,10 +20,14 @@
 #include <vector>
 #include <string>
 
-bool isInMatrix(std::vector<std::string, std::string> vec) {
-
+bool isInMatrix(std::vector<std::string> vec) {
+	
 }
 
 int main() {
+	std::vector<std::string> vec {{'F', 'A', 'C', 'I'},
+				      {'O', 'B', 'Q', 'P'},
+				      {'A', 'N', 'O', 'P'},
+				      {'M', 'A', 'S', 'S'}};
 	return 0;
 }
