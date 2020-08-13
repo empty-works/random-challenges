@@ -24,13 +24,17 @@ bool checkLToR(std::string element, std::string word) {
 	return element == word;
 }
 
-
+bool checkUpDown(std::vector<std::string> vec, int index, std::string word) {
+	for(int i {0}; i < vec.size(); i++) {
+		if(word[i] != vec[i][index]) {
+			return false;
+		}
+	}	
+	return true;
+}
 
 bool isInMatrix(std::vector<std::string> vec, std::string word) {
 	for(int i {0}; i < vec.size(); i++) {
-		if(vec[i][0] == word[0]) {
-			
-		}
 	}	
 }
 
