@@ -20,14 +20,16 @@
 #include <vector>
 #include <string>
 
-bool checkLToR(std::string element, std::word) {
+bool checkLToR(std::string element, std::string word) {
 	return element == word;
 }
 
+
+
 bool isInMatrix(std::vector<std::string> vec, std::string word) {
 	for(int i {0}; i < vec.size(); i++) {
-		for(int j {0}; j < vec[i].size(); j++) {
-
+		if(vec[i][0] == word[0]) {
+			
 		}
 	}	
 }
