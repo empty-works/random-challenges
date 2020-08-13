@@ -20,9 +20,14 @@
 #include <vector>
 #include <string>
 
-bool isInMatrix(std::vector<std::string> vec) {
+bool checkLToR(std::string element, std::word) {
+	return element == word;
+}
+
+bool isInMatrix(std::vector<std::string> vec, std::string word) {
 	for(int i {0}; i < vec.size(); i++) {
 		for(int j {0}; j < vec[i].size(); j++) {
+
 		}
 	}	
 }
