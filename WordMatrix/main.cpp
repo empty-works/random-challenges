@@ -27,6 +27,7 @@ bool checkLToR(std::string element, std::string word) {
 bool checkUpDown(std::vector<std::string> vec, int index, std::string word) {
 	for(int i {0}; i < vec.size(); i++) {
 		if(word[i] != vec[i][index]) {
+			
 			return false;
 		}
 	}	
@@ -35,6 +36,7 @@ bool checkUpDown(std::vector<std::string> vec, int index, std::string word) {
 
 bool isInMatrix(std::vector<std::string> vec, std::string word) {
 	for(int i {0}; i < vec.size(); i++) {
+
 	}	
 }
 
@@ -43,5 +45,6 @@ int main() {
 				      {'O', 'B', 'Q', 'P'},
 				      {'A', 'N', 'O', 'P'},
 				      {'M', 'A', 'S', 'S'}};
+	std::cout << "Checking up and down search: " << checkUpDown(vec, 0, "FOAM") << std::endl;
 	return 0;
 }
