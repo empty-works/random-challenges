@@ -50,6 +50,8 @@ int main() {
 				      {'O', 'B', 'Q', 'P'},
 				      {'A', 'N', 'O', 'P'},
 				      {'M', 'A', 'S', 'S'}};
-	std::cout << "Checking up and down search: " << checkUpDown(vec, 0, "FOAM") << std::endl;
+	std::cout << "Checking up to down search: " << checkUpDown(vec, 0, "FOAM") << std::endl;
+	std::cout << "Checking left to right search: " << isInMatrix(vec, "MASS") << std::endl;
+
 	return 0;
 }
