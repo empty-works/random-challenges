@@ -21,7 +21,17 @@
 #include <string>
 
 bool checkLToR(std::string element, std::string word) {
-	return element == word;
+	if(element.length() == word.length()) {
+		for(int i {0}; i < word.length(); i++) {
+			if(element[i] != word[i]) {
+				return false;
+			}	
+		}
+		return true;
+	}
+	else {
+		return false;
+	}
 }
 
 bool checkUpDown(std::vector<std::string> vec, int index, std::string word) {
