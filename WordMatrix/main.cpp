@@ -23,6 +23,7 @@
 bool checkLToR(std::string element, std::string word) {
 	if(element.length() == word.length()) {
 		for(int i {0}; i < word.length(); i++) {
+			std::cout << element[i] << std::endl;
 			if(element[i] != word[i]) {
 				return false;
 			}	
@@ -48,11 +49,11 @@ bool isInMatrix(std::vector<std::string> vec, std::string word) {
 		if(checkLToR(vec[i], word) == true) {
 			return true;
 		}
-		else {
-			return checkUpDown(vec, i, word);
+		else if(checkUpDown(vec, i, word) == true){
+			return true;
 		}
-		
 	}	
+	return false;	
 }
 
 int main() {
