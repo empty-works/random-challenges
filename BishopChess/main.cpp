@@ -33,7 +33,14 @@
 #include <vector>
 
 class BishopChess {
-	std::vector<std::pair<int, int>> bishop_positions {};
+	std::vector<std::pair<int, int>> bishop_positions {std::make_pair(0,1), std::make_pair(1, 2), std::make_pair(2, 2), std::make_pair(4, 0)};
+	int num_m {0};
+
+	public:
+	BishopChess();
+	BishopChess(int num_m);
+
+
 };
 
 int main() {
