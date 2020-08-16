@@ -29,6 +29,12 @@
  * */
 
 #include <iostream>
+#include <algorithm>
+#include <vector>
+
+class BishopChess {
+	std::vector<std::pair<int, int>> bishop_positions {};
+};
 
 int main() {
 	return 0;
