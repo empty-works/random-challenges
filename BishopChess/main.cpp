@@ -47,7 +47,9 @@ class BishopChess {
 };
 
 void BishopChess::show_board() {
-	
+	for(size_t i {0}; i < num_m; i++) {
+
+	}	
 }
 
 int main() {
