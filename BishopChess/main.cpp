@@ -24,7 +24,7 @@
  * [0, 0, 0, 0, 0]
  * [b, 0, 0, 0, 0]
  *
- * You should return 2, since bishops 1 and 3 attach each 
+ * You should return 2, since bishops 1 and 3 attack each 
  * other as well as bishops 3 and 4.
  * */
 
@@ -40,7 +40,8 @@ class BishopChess {
 	BishopChess();
 	BishopChess(int num_m);
 
-
+	void show_board();	
+	void place_bishop(const std::pair<int, int>);
 };
 
 int main() {
