@@ -37,12 +37,18 @@ class BishopChess {
 	int num_m {0};
 
 	public:
-	BishopChess();
-	BishopChess(int num_m);
+	BishopChess(){}
+	BishopChess(int in_num_m) {
+		num_m = in_num_m;
+	}
 
 	void show_board();	
 	void place_bishop(const std::pair<int, int>);
 };
+
+void BishopChess::show_board() {
+	
+}
 
 int main() {
 	return 0;
