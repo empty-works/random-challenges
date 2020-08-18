@@ -40,15 +40,17 @@ class BishopChess {
 	BishopChess(){}
 	BishopChess(int in_num_m) {
 		num_m = in_num_m;
+		build_board();
 	}
 
+	void build_board();
 	void show_board();	
 	void place_bishop(const std::pair<int, int>);
 };
 
 void BishopChess::show_board() {
 	for(size_t i {0}; i < num_m; i++) {
-
+		
 	}	
 }
 
