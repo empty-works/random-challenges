@@ -42,7 +42,7 @@ class BishopChess {
 	BishopChess(){}
 	BishopChess(int in_num_m) {
 		num_m = in_num_m;
-		build_board();
+		chess_board = build_board();
 	}
 
 	std::vector<std::string> build_board();
@@ -65,16 +65,13 @@ std::vector<std::string> BishopChess::build_board() {
 }
 
 void BishopChess::show_board() {
-	for(size_t i {0}; i < num_m; i++) {
-		
+	for(auto line : chess_board) {
+		std::cout << line << std::endl;	
 	}	
 }
 
 int main() {
 	BishopChess bc(5);
-	auto vec {bc.build_board()};
-	for(auto line : vec) {
-		std::cout << line << std::endl;
-	}
+	bc.show_board();
 	return 0;
 }
