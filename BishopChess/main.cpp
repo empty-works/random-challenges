@@ -35,6 +35,7 @@
 
 class BishopChess {
 	std::vector<std::pair<int, int>> bishop_positions {std::make_pair(0,1), std::make_pair(1, 2), std::make_pair(2, 2), std::make_pair(4, 0)};
+	std::vector<std::string> chess_board {};
 	int num_m {0};
 
 	public:
@@ -55,10 +56,12 @@ std::vector<std::string> BishopChess::build_board() {
 		std::string row_str { "[ "};
 		// Need to add 2 to make room for the brackets.
 		for(size_t j {0}; j < num_m; j++) {
-				
+			row_str += "0 ";		
 		}
 		row_str += "]";
+		vec.push_back(row_str);
 	}	
+	return vec;
 }
 
 void BishopChess::show_board() {
@@ -68,5 +71,10 @@ void BishopChess::show_board() {
 }
 
 int main() {
+	BishopChess bc(5);
+	auto vec {bc.build_board()};
+	for(auto line : vec) {
+		std::cout << line << std::endl;
+	}
 	return 0;
 }
