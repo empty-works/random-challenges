@@ -52,12 +52,12 @@ class BishopChess {
 std::vector<std::string> BishopChess::build_board() {
 	std::vector<std::string> vec {};
 	for(size_t i {0}; i < num_m; i++) {
-		vec.push_back( "[ ");
+		std::string row_str { "[ "};
 		// Need to add 2 to make room for the brackets.
 		for(size_t j {0}; j < num_m; j++) {
-			
+				
 		}
-		vec.push_back("]");
+		row_str += "]";
 	}	
 }
 
