@@ -34,7 +34,6 @@
 #include <string>
 
 class BishopChess {
-	std::vector<std::pair<int, int>> bishop_positions {std::make_pair(0,1), std::make_pair(1, 2), std::make_pair(2, 2), std::make_pair(4, 0)};
 	std::vector<std::string> chess_board {};
 	int num_m {0};
 
@@ -70,8 +69,14 @@ void BishopChess::show_board() {
 	}	
 }
 
+void BishopChess::place_bishop(const std::pair<int, int> the_pair) {
+	chess_board[the_pair.first][the_pair.second] = 'b'; 
+}
+
 int main() {
 	BishopChess bc(5);
+	bc.show_board();
+	bc.place_bishop(std::pair<int, int>(0, 0));
 	bc.show_board();
 	return 0;
 }
