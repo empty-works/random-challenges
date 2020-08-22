@@ -24,11 +24,18 @@
 
 int getNum(const int rowsCols, const int searchNum) {
 
+	int numOccurrences {0};
+
 	// Set up table.
 	for(size_t i {0}; i < rowsCols; i++) {
 		for(size_t j {0}; j < rowsCols; j++) {
-
+			int product = (i + 1) * (j + 1);
+			std::cout << "| " << product << "|";	
+			if(product == searchNum) {
+				numOccurrences++;
+			}
 		}
+		std::cout << std::endl;
 	}	
 }
 
