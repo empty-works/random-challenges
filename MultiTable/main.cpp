@@ -22,6 +22,17 @@
 
 #include <iostream>
 
+int getNum(const int rowsCols, const int searchNum) {
+
+	// Set up table.
+	for(size_t i {0}; i < rowsCols; i++) {
+		for(size_t j {0}; j < rowsCols; j++) {
+
+		}
+	}	
+}
+
 int main() {
+
 	return 0;
 }
