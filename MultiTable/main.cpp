@@ -22,7 +22,7 @@
 
 #include <iostream>
 
-int getNum(const int rowsCols, const int searchNum) {
+int getNum(const size_t rowsCols, const int searchNum) {
 
 	int numOccurrences {0};
 
@@ -37,9 +37,12 @@ int getNum(const int rowsCols, const int searchNum) {
 		}
 		std::cout << std::endl;
 	}	
+	return numOccurrences;
 }
 
 int main() {
 
+	int result = getNum(6, 12);
+	std::cout << "Number of times X appears: " << result << std::endl;
 	return 0;
 }
