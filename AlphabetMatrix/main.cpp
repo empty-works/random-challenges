@@ -40,7 +40,16 @@
  * */
 
 #include <iostream>
+#include <vector>
+
+int getNumColsRemoved(const std::vector<int> &vec) {
+	if(vec.size() == 1) {
+		return 0;
+	}
+}
 
 int main() {
+
+
 	return 0;
 }
