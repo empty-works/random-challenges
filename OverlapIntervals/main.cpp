@@ -12,6 +12,14 @@
  * */
 
 #include <iostream>
+#include <vector>
+
+auto getList(const std::vector<std::pair<int, int>> &vec) {
+	
+	std::vector<std::pair<int, int>> new_vec {};
+
+	return new_vec;
+}
 
 int main() {
 	return 0;
