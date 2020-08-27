@@ -17,7 +17,19 @@
 auto getList(const std::vector<std::pair<int, int>> &vec) {
 	
 	std::vector<std::pair<int, int>> new_vec {};
+	int first;
+	int second;
+        int third;	
+	for(size_t i {1}; i <= vec.size() - 1; i++) {
+		// Checking previous
+		if(i - 1 >= 0) {
 
+		}
+		// Checking next pair.
+		if(i + 1 < vec.size()){
+				
+		}
+	}	
 	return new_vec;
 }
 
