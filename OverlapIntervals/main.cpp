@@ -17,13 +17,14 @@
 auto getList(const std::vector<std::pair<int, int>> &vec) {
 	
 	std::vector<std::pair<int, int>> new_vec {};
-	int first;
-	int second;
-        int third;	
+	bool first_check = false;
+	bool second_check = false;
 	for(size_t i {1}; i <= vec.size() - 1; i++) {
 		// Checking previous
 		if(i - 1 >= 0) {
-
+			if(vec.at(i - 1).second >= vec.at(i).first) {
+				first_check = true;	
+			}	
 		}
 		// Checking next pair.
 		if(i + 1 < vec.size()){
