@@ -40,5 +40,13 @@ auto getList(const std::vector<std::pair<int, int>> &vec) {
 }
 
 int main() {
+
+	std::vector<std::pair<int, int>> vec {std::make_pair(1, 3), std::make_pair(5, 8), 
+	std::make_pair(4, 10), std::make_pair(20, 25)};
+
+	std::vector<std::pair<int, int>> new_vec = getList(vec); 
+	for(int i {0}; i < new_vec.size(); i++) {
+		std::cout << new_vec.at(i).first << " " << new_vec.at(i).second << std::endl;
+	}
 	return 0;
 }
