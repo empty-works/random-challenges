@@ -32,6 +32,9 @@ auto getList(const std::vector<std::pair<int, int>> &vec) {
 				second_check = true;
 			}			
 		}
+		if(first_check == true && second_check == true) {
+			new_vec.push_back(vec.at(i));
+		}
 	}	
 	return new_vec;
 }
