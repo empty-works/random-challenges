@@ -28,7 +28,9 @@ auto getList(const std::vector<std::pair<int, int>> &vec) {
 		}
 		// Checking next pair.
 		if(i + 1 < vec.size()){
-				
+			if(vec.at(i).second >= vec.at(i + 1).first) {
+				second_check = true;
+			}			
 		}
 	}	
 	return new_vec;
