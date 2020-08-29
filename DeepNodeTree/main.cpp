@@ -10,6 +10,15 @@
  **/
 
 #include <iostream>
+#include <string>
+
+class BinarySearchTree {
+	
+	class Node {
+		int key;
+
+	};
+};
 
 int main() {
 	return 0;
