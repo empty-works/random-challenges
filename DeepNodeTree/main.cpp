@@ -12,11 +12,27 @@
 #include <iostream>
 #include <string>
 
-class BinarySearchTree {
-	
-	class Node {
+class MyBinarySearchTree {
+ 	public:	
+	class MyBinarySearchTree::MyNode {
 		int key;
+		std::string value;
+		MyNode left, right;
 
+		public:
+		MyNode(int key, std::string value) {
+			this.key = key;
+			this.value = value;		
+		}
+
+		MyNode min() {
+			if(left == null) {
+				return this;
+			}
+			else {
+				return left.min();
+			}
+		}
 	};
 };
 
