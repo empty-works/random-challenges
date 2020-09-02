@@ -34,6 +34,7 @@ int minRemoved(const std::string sample) {
 			}
 		}	
 	}
+	return count;
 }
 
 bool isParen(const char character) {
@@ -54,5 +55,8 @@ char switchParen(const char character) {
 
 int main() {
 
+	std::string test_str {")("};
+	int num_removed = minRemoved(test_str);
+	std::cout << "Number of parentheses removed: " << num_removed << std::endl;
 	return 0;
 }
