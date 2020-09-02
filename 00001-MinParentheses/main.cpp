@@ -14,12 +14,13 @@
 #include <string>
 
 int minRemoved(const std::string sample) {
-	OPEN_PAREN = "(";
-	CLOSED_PAREN = ")";
-	currentParen = OPEN_PAREN;
+	std::string OPEN_PAREN {"("};
+	std::string CLOSED_PAREN {")"};
+	std::string currentParen {OPEN_PAREN};
+	int count {0};
 
 	for(const char in : sample){
-
+		
 	}
 }
 
