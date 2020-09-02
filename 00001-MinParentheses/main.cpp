@@ -11,7 +11,19 @@
  * */
 
 #include <iostream>
+#include <string>
+
+int minRemoved(const std::string sample) {
+	OPEN_PAREN = "(";
+	CLOSED_PAREN = ")";
+	currentParen = OPEN_PAREN;
+
+	for(const char in : sample){
+
+	}
+}
 
 int main() {
+
 	return 0;
 }
