@@ -13,15 +13,26 @@
 #include <iostream>
 #include <string>
 
-std::string OPEN_PAREN {"("};
-std::string CLOSED_PAREN {")"};
+char OPEN_PAREN {'('};
+char CLOSED_PAREN {')'};
+
+bool isParen(const char character);
+char switchParen(const char character);
 
 int minRemoved(const std::string sample) {
-	std::string currentParen {OPEN_PAREN};
+	char currentParen {OPEN_PAREN};
 	int count {0};
 
 	for(const char in : sample){
-			
+		if(isParen(in) == true) {
+			if(in == currentParen) {
+				// Switch the parenthesis to other parenthesis.
+				currentParen = switchParen(in);
+			}	
+			else {
+				count++;
+			}
+		}	
 	}
 }
 
@@ -30,6 +41,15 @@ bool isParen(const char character) {
 		return true;
 	}
 	return false;
+}
+
+char switchParen(const char character) {
+	if(character == OPEN_PAREN) {
+		return CLOSED_PAREN;
+	}
+	else {
+		return OPEN_PAREN;
+	}
 }
 
 int main() {
