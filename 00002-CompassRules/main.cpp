@@ -31,12 +31,23 @@
 #include <string>
 #include <vector>
 #include <algorithm>
+#include <set>
 
-
+std::set<char> getPoints(std::vector<std::string> rules) {
+	// Pattern of each rule is "POINT <SPACE> DIRECTION <SPACE> POINT"
+	std::set<char> s1 {};	
+	for(std::string rule : rules) {
+		s1.insert(rule[0]); // Take first character (point)
+		s1.insert(rule[rule.length() - 1]); // Take second point
+	}	
+	return s1;
+}
 
 bool isValid(std::vector<std::string> vec) {
 	
 	// Get all points in a list
+	
+	// Place default coordinates and names of points in pairs
 	
 	// Check every rule one by one
 	
