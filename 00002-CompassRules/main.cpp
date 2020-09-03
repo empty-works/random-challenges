@@ -28,7 +28,22 @@
  **/
 
 #include <iostream>
+#include <string>
+#include <vector>
+#include <algorithm>
+
+
+
+bool isValid(std::vector<std::string> vec) {
+	
+	// Get all points in a list
+	
+	// Check every rule one by one
+	
+	// Assign values to all points simultaneously
+}
 
 int main() {
+
 	return 0;
 }
