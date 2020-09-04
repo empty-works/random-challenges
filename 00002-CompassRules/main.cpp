@@ -43,16 +43,22 @@ std::set<char> getPoints(std::vector<std::string> rules) {
 	return s1;
 }
 
+std::vector<std::pair<char, std::pair<int, int>>> initCoords(const std::set<char> & points) {
+
+	std::vector<std::pair<char, std::pair<int, int>>> coords {};
+	for(char point : points) {
+		coords.push_back(std::make_pair(point, std::make_pair(0, 0)));
+	}
+	return coords;
+}
 
 bool isValid(std::vector<std::string> vec) {
 	
 	// Get all points in a list
 	std::set<char> points {getPoints(vec)};
-	for(char elem : points) {
-		std::cout << elem << std::endl;
-	}
 	
 	// Place default coordinates and names of points in pairs
+		
 	
 	// Check every rule one by one
 	
@@ -61,7 +67,5 @@ bool isValid(std::vector<std::string> vec) {
 
 int main() {
 	
-	std::vector<std::string> vec {"A N B", "B NE C", "A N B"};
-	isValid(vec);
 	return 0;
 }
