@@ -32,6 +32,7 @@
 #include <vector>
 #include <algorithm>
 #include <set>
+#include <utility>
 
 std::set<char> getPoints(std::vector<std::string> rules) {
 	// Pattern of each rule is "POINT <SPACE> DIRECTION <SPACE> POINT"
@@ -58,7 +59,10 @@ bool isValid(std::vector<std::string> vec) {
 	std::set<char> points {getPoints(vec)};
 	
 	// Place default coordinates and names of points in pairs
-		
+	std::vector<std::pair<char, std::pair<int, int>>> coords {initCoords(points)};
+	for(auto coord : coords) {
+		std::cout << coord.first << " " << coord.second.first << " " << coord.second.second << std::endl;
+	}
 	
 	// Check every rule one by one
 	
@@ -67,5 +71,7 @@ bool isValid(std::vector<std::string> vec) {
 
 int main() {
 	
+	std::vector<std::string> vec {"A N B", "B NE C", "A N B"};
+	isValid(vec);
 	return 0;
 }
