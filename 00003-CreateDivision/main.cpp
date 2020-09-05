@@ -19,11 +19,11 @@ int my_div(const int num, const int den) {
 	// Do division...kind of
 	int sum_count {0};
 	int num_div {0};
-	while(sum_count <= num) {
+	while(sum_count < num) {
 		sum_count += den;
 		num_div++;
 	}
-	return sum_count;
+	return num_div;
 }
 
 int main() {
