@@ -21,6 +21,10 @@ int my_div(const int num, const int den) {
 	int num_div {0};
 	while(sum_count < num) {
 		sum_count += den;
+		// If the latest addition exceeds the numerator, then break
+		if(sum_count > num) {
+			break;
+		}
 		num_div++;
 	}
 	return num_div;
