@@ -27,7 +27,13 @@ int my_div(const int num, const int den) {
 }
 
 int main() {
-	int res {my_div(4, 2)};
-	std::cout << res << std::endl;
+	int num;
+	int den;
+	std::cout << "Numerator: ";
+	std::cin >> num;
+	std::cout << "Denominator: ";
+	std::cin >> den;	
+	int res {my_div(num, den)};
+	std::cout << "Result: " << res << std::endl;
 	return 0;
 }
